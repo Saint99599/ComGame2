@@ -39,7 +39,7 @@ namespace Project1.src
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             #region Tilemaps
-            map = new TmxMap("map1.tmx");
+            map = new TmxMap("Content/map1.tmx");
             tileset = Content.Load<Texture2D>("assets\\" + map.Tilesets[0].Name.ToString());
             int tileWidth = map.Tilesets[0].TileWidth;
             int tileHeight = map.Tilesets[0].TileHeight;

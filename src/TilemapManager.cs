@@ -28,9 +28,9 @@ namespace Project1.src
         {
             for (var i = 0; i < map.Layers.Count; i++)
             {
-                for (var j = 0; j < map.Layers[i].Tiles.Length; j++)
+                for (var j = 0; j < map.Layers[i].Tiles.Count; j++)
                 {
-                    int gid = map.TileLayers[i].Tiles[j];
+                    int gid = map.Layers[i].Tiles[j].Gid;
                     if (gid == 0)
                     {
 

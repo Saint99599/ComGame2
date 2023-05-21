@@ -38,9 +38,7 @@
 /build:assets/Tileset.png
 
 #begin map1.tmx
-/importer:
-/processor:
-/build:map1.tmx
+/copy:map1.tmx
 
 #begin Movement/Idle.png
 /importer:TextureImporter
