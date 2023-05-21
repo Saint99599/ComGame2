@@ -26,9 +26,9 @@ namespace Project1.src
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            for (var i = 0; i < map.TileLayers.Count; i++)
+            for (var i = 0; i < map.Layers.Count; i++)
             {
-                for (var j = 0; j < map.TileLayers[i].Tiles.Length; j++)
+                for (var j = 0; j < map.Layers[i].Tiles.Length; j++)
                 {
                     int gid = map.TileLayers[i].Tiles[j];
                     if (gid == 0)

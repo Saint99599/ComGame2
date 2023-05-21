@@ -25,7 +25,7 @@
 /processorParam:TextureFormat=Color
 /build:assets/Background.png
 
-#begin assets/floor.png
+#begin assets/Tileset.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,7 +35,12 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:assets/floor.png
+/build:assets/Tileset.png
+
+#begin map1.tmx
+/importer:
+/processor:
+/build:map1.tmx
 
 #begin Movement/Idle.png
 /importer:TextureImporter
