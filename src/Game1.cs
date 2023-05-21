@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TiledSharp;
@@ -25,6 +26,12 @@ namespace Project1.src
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+
+            //_graphics.PreferredBackBufferWidth = 1920;
+            //_graphics.PreferredBackBufferHeight = 1080;
+            //_graphics.IsFullScreen = true;
+            //_graphics.ApplyChanges();
         }
 
         protected override void Initialize()
@@ -39,7 +46,7 @@ namespace Project1.src
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             #region Tilemaps
-            map = new TmxMap("Content/map1.tmx");
+            map = new TmxMap("Content/Map.tmx");
             tileset = Content.Load<Texture2D>("assets\\" + map.Tilesets[0].Name.ToString());
             int tileWidth = map.Tilesets[0].TileWidth;
             int tileHeight = map.Tilesets[0].TileHeight;
