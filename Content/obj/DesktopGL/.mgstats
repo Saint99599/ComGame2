@@ -1,6 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"/home/void/Desktop/Workspaces/ComGame2/Content/assets/Background.png","/home/void/Desktop/Workspaces/ComGame2/Content/bin/DesktopGL/assets/Background.xnb","TextureProcessor","Texture2DContent",515071,2457685,0.1738139
-"/home/void/Desktop/Workspaces/ComGame2/Content/assets/Tileset.png","/home/void/Desktop/Workspaces/ComGame2/Content/bin/DesktopGL/assets/Tileset.xnb","TextureProcessor","Texture2DContent",5921,245845,0.0067631
-"/home/void/Desktop/Workspaces/ComGame2/Content/map1.tmx","/home/void/Desktop/Workspaces/ComGame2/Content/bin/DesktopGL/map1.tmx","CopyItem","File",4371,4371,0.0002438
-"/home/void/Desktop/Workspaces/ComGame2/Content/Movement/Idle.png","/home/void/Desktop/Workspaces/ComGame2/Content/bin/DesktopGL/Movement/Idle.xnb","TextureProcessor","Texture2DContent",1461,36949,0.0013745
-"/home/void/Desktop/Workspaces/ComGame2/Content/Movement/Run.png","/home/void/Desktop/Workspaces/ComGame2/Content/bin/DesktopGL/Movement/Run.xnb","TextureProcessor","Texture2DContent",1814,55381,0.0038626
+"C:/Users/sent9/source/repos/ComGame2/Content/assets/Background.png","C:/Users/sent9/source/repos/ComGame2/Content/bin/DesktopGL/assets/Background.xnb","TextureProcessor","Texture2DContent",515071,2457685,0.1996094
+"C:/Users/sent9/source/repos/ComGame2/Content/assets/Tileset.png","C:/Users/sent9/source/repos/ComGame2/Content/bin/DesktopGL/assets/Tileset.xnb","TextureProcessor","Texture2DContent",5921,245845,0.0079378
+"C:/Users/sent9/source/repos/ComGame2/Content/Map.tmx","C:\Users\sent9\source\repos\ComGame2\Content\bin\DesktopGL\Map.tmx","CopyItem","File",2089,2089,0.0011195
+"C:/Users/sent9/source/repos/ComGame2/Content/Movement/Idle.png","C:/Users/sent9/source/repos/ComGame2/Content/bin/DesktopGL/Movement/Idle.xnb","TextureProcessor","Texture2DContent",1461,36949,0.0023085
+"C:/Users/sent9/source/repos/ComGame2/Content/Movement/Run.png","C:/Users/sent9/source/repos/ComGame2/Content/bin/DesktopGL/Movement/Run.xnb","TextureProcessor","Texture2DContent",1814,55381,0.003487
+"C:/Users/sent9/source/repos/ComGame2/Content/Tileset.tsx","C:\Users\sent9\source\repos\ComGame2\Content\bin\DesktopGL\Tileset.tsx","CopyItem","File",238,238,0.0005491

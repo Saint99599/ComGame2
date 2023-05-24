@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/void/Desktop/Workspaces/ComGame2/Content/assets/Tileset.png</SourceFile>
-  <SourceTime>2023-05-21T15:53:59.2758045+07:00</SourceTime>
-  <DestFile>/home/void/Desktop/Workspaces/ComGame2/Content/bin/DesktopGL/assets/Tileset.xnb</DestFile>
-  <DestTime>2023-05-21T16:09:10.985263+07:00</DestTime>
+  <SourceFile>C:/Users/sent9/source/repos/ComGame2/Content/assets/Tileset.png</SourceFile>
+  <SourceTime>2023-05-24T12:28:59.7563522+07:00</SourceTime>
+  <DestFile>C:/Users/sent9/source/repos/ComGame2/Content/bin/DesktopGL/assets/Tileset.xnb</DestFile>
+  <DestTime>2023-05-24T12:36:43.1909695+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T18:44:56+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

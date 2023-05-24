@@ -4,10 +4,10 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/home/void/Desktop/Workspaces/ComGame2/Content/assets/Background.png</File>
-    <File>/home/void/Desktop/Workspaces/ComGame2/Content/assets/Tileset.png</File>
-    <File>/home/void/Desktop/Workspaces/ComGame2/Content/Movement/Idle.png</File>
-    <File>/home/void/Desktop/Workspaces/ComGame2/Content/Movement/Run.png</File>
+    <File>C:/Users/sent9/source/repos/ComGame2/Content/assets/Background.png</File>
+    <File>C:/Users/sent9/source/repos/ComGame2/Content/assets/Tileset.png</File>
+    <File>C:/Users/sent9/source/repos/ComGame2/Content/Movement/Idle.png</File>
+    <File>C:/Users/sent9/source/repos/ComGame2/Content/Movement/Run.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

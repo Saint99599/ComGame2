@@ -37,8 +37,8 @@
 /processorParam:TextureFormat=Color
 /build:assets/Tileset.png
 
-#begin map1.tmx
-/copy:map1.tmx
+#begin Map.tmx
+/copy:Map.tmx
 
 #begin Movement/Idle.png
 /importer:TextureImporter
@@ -63,4 +63,7 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Movement/Run.png
+
+#begin Tileset.tsx
+/copy:Tileset.tsx
 

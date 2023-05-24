@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1hrGAbHeJqlpw8FDAs1W3wLhaYVGnXt/5854PpDBy6IPe6f+0+1JthyryFd2r1rqkgDPowYeMmScuCWvTE1zLw==",
+  "dgSpecHash": "Kl5EuIsdAPfNPU93o5RaTNrp3aMT1/Pt3/3fioBDFQgOyf149clLq1xYQ4fBm7vXsqEKJVa6xmXSie5Bl2eFQg==",
   "success": true,
-  "projectFilePath": "/home/void/Desktop/Workspaces/ComGame2/2DSideScrolling.csproj",
+  "projectFilePath": "C:\\Users\\sent9\\source\\repos\\ComGame2\\2DSideScrolling.csproj",
   "expectedPackageFiles": [
-    "/home/void/.nuget/packages/monogame.content.builder.task/3.8.1.303/monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "/home/void/.nuget/packages/monogame.framework.desktopgl/3.8.1.303/monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
-    "/home/void/.nuget/packages/tiledsharp/1.0.1/tiledsharp.1.0.1.nupkg.sha512",
-    "/home/void/.nuget/packages/microsoft.netcore.app.ref/6.0.16/microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
-    "/home/void/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.16/microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
-    "/home/void/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.16/microsoft.netcore.app.host.linux-x64.6.0.16.nupkg.sha512"
+    "C:\\Users\\sent9\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\sent9\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\sent9\\.nuget\\packages\\tiledsharp\\1.0.1\\tiledsharp.1.0.1.nupkg.sha512"
   ],
   "logs": []
 }

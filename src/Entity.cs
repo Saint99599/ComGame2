@@ -16,7 +16,9 @@ namespace Project1.src
             Run
         }
 
-        public Vector2 postion;
+        public Vector2 position;
+        public Rectangle hitbox;
+
         public abstract void Update();
         public abstract void Draw(SpriteBatch spriteBatch, GameTime gameTime);
     }
