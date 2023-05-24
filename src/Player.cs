@@ -10,7 +10,7 @@ namespace Project1.src
         public Rectangle playerFallRect;
 
         public float playerSpeed = 4;
-        public float fallSpeed = 4;
+        public float fallSpeed = 1;
         public bool isFalling = true;
 
         public Animation[] playerAnimation;
@@ -43,6 +43,12 @@ namespace Project1.src
             if (keyboard.IsKeyDown(Keys.D))
             {
                 velocity.X += playerSpeed;
+                playerAnimationController = currentAnimation.Run;
+            }
+            if (keyboard.IsKeyDown(Keys.W))
+            {
+                velocity.Y -= playerSpeed;
+                isFalling = false;
                 playerAnimationController = currentAnimation.Run;
             }
 
