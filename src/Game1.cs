@@ -11,6 +11,8 @@ namespace Project1.src
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        public static float screenWidth;
+        public static float screenHeight;
 
         #region Tilemaps
         private TmxMap map;
@@ -25,6 +27,11 @@ namespace Project1.src
         private Player player;
         #endregion
 
+        #region Camera
+        private Camera camera;
+        private Matrix transformMatrix;
+        #endregion
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -32,16 +39,19 @@ namespace Project1.src
             IsMouseVisible = true;
 
 
-            _graphics.PreferredBackBufferWidth = 1000;
+            /*_graphics.PreferredBackBufferWidth = 1000;
             _graphics.PreferredBackBufferHeight = 1000;
-            //_graphics.IsFullScreen = true;
-            _graphics.ApplyChanges();
+            _graphics.ApplyChanges();*/
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            _graphics.PreferredBackBufferWidth = 1000;
+            _graphics.PreferredBackBufferHeight = 1000;
+            _graphics.ApplyChanges();
+            screenWidth = _graphics.PreferredBackBufferWidth;
+            screenHeight = _graphics.PreferredBackBufferHeight;
             base.Initialize();
         }
 
@@ -74,6 +84,10 @@ namespace Project1.src
                 Content.Load<Texture2D>("Movement\\Idle"),
                 Content.Load<Texture2D>("Movement\\Run")
             );
+            #endregion
+
+            #region Camera
+            camera = new Camera();
             #endregion
         }
 
@@ -111,6 +125,10 @@ namespace Project1.src
             }
             #endregion
 
+            #region Camera update
+            transformMatrix = camera.Follow(player.hitbox);
+            #endregion
+
             base.Update(gameTime);
         }
 
@@ -118,7 +136,7 @@ namespace Project1.src
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(transformMatrix: transformMatrix);
             tilemapManager.Draw(_spriteBatch);
             player.Draw(_spriteBatch, gameTime);
             _spriteBatch.End();
