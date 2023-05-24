@@ -10,7 +10,7 @@ namespace Project1.src
         public Rectangle playerFallRect;
 
         public float playerSpeed = 4;
-        public float fallSpeed = 5;
+        public float fallSpeed = 4;
         public bool isFalling = true;
 
         public Animation[] playerAnimation;
@@ -25,7 +25,8 @@ namespace Project1.src
 
             playerAnimation[0] = new Animation(idleSprite);
             playerAnimation[1] = new Animation(runSprite);
-            hitbox = new Rectangle((int)position.X, (int)position.Y, 48, 48);
+            hitbox = new Rectangle((int)position.X, (int)position.Y, 26, 48);
+            playerFallRect = new Rectangle((int)position.X, (int)position.Y+48, 26, 1);
         }
 
         public override void Update()
@@ -46,8 +47,8 @@ namespace Project1.src
             }
 
             position = velocity;
-            hitbox.X = (int)position.X-24;
-            hitbox.Y = (int)position.Y-1;
+            hitbox.X = (int)position.X;
+            hitbox.Y = (int)position.Y;
             playerFallRect.X = (int)position.X;
             playerFallRect.Y = (int)position.Y+48;
         }
