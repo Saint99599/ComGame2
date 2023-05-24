@@ -14,6 +14,8 @@ namespace Project1.src
         public static float screenWidth;
         public static float screenHeight;
 
+        private Matrix scaleMatrix;
+
         #region Tilemaps
         private TmxMap map;
         private TilemapManager tilemapManager;
@@ -37,21 +39,20 @@ namespace Project1.src
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-
-
-            /*_graphics.PreferredBackBufferWidth = 1000;
-            _graphics.PreferredBackBufferHeight = 1000;
-            _graphics.ApplyChanges();*/
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            _graphics.PreferredBackBufferWidth = 500;
-            _graphics.PreferredBackBufferHeight = 400;
+            _graphics.PreferredBackBufferHeight = 1080;
+            _graphics.PreferredBackBufferWidth = 1920;
             _graphics.ApplyChanges();
             screenWidth = _graphics.PreferredBackBufferWidth;
             screenHeight = _graphics.PreferredBackBufferHeight;
+            var WindowSize = new Vector2(screenWidth, screenHeight);
+            var mapSize = new Vector2(250, 450);
+            var scale = WindowSize / mapSize;
+            scaleMatrix = Matrix.CreateScale(scale.X, scale.Y, 1f);
             base.Initialize();
         }
 

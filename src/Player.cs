@@ -10,7 +10,7 @@ namespace Project1.src
         public Rectangle playerFallRect;
 
         public float playerSpeed = 4;
-        public float fallSpeed = 1;
+        public float fallSpeed = 2;
         public bool isFalling = true;
 
         public Animation[] playerAnimation;
