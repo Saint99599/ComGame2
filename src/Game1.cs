@@ -99,8 +99,9 @@ namespace Project1.src
             //X axis
             foreach (var rect in collisionRects)
             {
-                Console.WriteLine("X: " + rect.X + " Y: " + rect.Y + " W: " +rect.Width + " H: " + rect.Height);
-                Console.WriteLine("X: " + player.hitbox.X + " Y: " + player.hitbox.Y + " W: " + player.hitbox.Width + " H: " + player.hitbox.Height);
+                Console.WriteLine("R - X: " + rect.X + " Y: " + rect.Y + " W: " +rect.Width + " H: " + rect.Height);
+                Console.WriteLine("P - X: " + player.position.X + " Y: " + player.position.Y);
+                Console.WriteLine("PH- X: " + player.hitbox.X + " Y: " + player.hitbox.Y + " W: " + player.hitbox.Width + " H: " + player.hitbox.Height);
                 if (rect.Intersects(player.hitbox))
                 {
                     player.position.X = initPos.X;

@@ -47,7 +47,7 @@ namespace Project1.src
 
             position = velocity;
             hitbox.X = (int)position.X-24;
-            hitbox.Y = (int)position.Y-48;
+            hitbox.Y = (int)position.Y-1;
             playerFallRect.X = (int)position.X;
             playerFallRect.Y = (int)position.Y+48;
         }
