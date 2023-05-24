@@ -15,14 +15,14 @@ namespace Project1.src
         int row = 0;
         int c = 0;
         float timeSinceLastFrame = 0;
-        public Animation(Texture2D spritesheet, float width = 48, float height = 48) 
+        public Animation(Texture2D spritesheet, float width = 48, float height = 48)
         {
             this.spritesheet = spritesheet;
             frames = (int)(spritesheet.Width / width);
             Console.WriteLine(frames);
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 position, GameTime gameTime,float milisecondsperframes = 500) 
+        public void Draw(SpriteBatch spriteBatch, Vector2 position, GameTime gameTime,float milisecondsperframes = 500)
         {
             if (c < frames)
             {
@@ -30,13 +30,13 @@ namespace Project1.src
                 spriteBatch.Draw(spritesheet, position, rect, Color.White);
                 timeSinceLastFrame += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
-                if (timeSinceLastFrame > milisecondsperframes) 
-                { 
+                if (timeSinceLastFrame > milisecondsperframes)
+                {
                     timeSinceLastFrame -= milisecondsperframes;
                     c++;
-                    if (c == frames) 
+                    if (c == frames)
                     {
-                        c = 0;    
+                        c = 0;
                     }
                 }
             }

@@ -51,7 +51,7 @@ namespace Project1.src
 
             #region Tilemaps
             map = new TmxMap("Content/Map.tmx");
-            tileset = Content.Load<Texture2D>("assets\\" + map.Tilesets[0].Name.ToString());
+            tileset = Content.Load<Texture2D>("assets/" + map.Tilesets[0].Name.ToString());
             int tileWidth = map.Tilesets[0].TileWidth;
             int tileHeight = map.Tilesets[0].TileHeight;
             int tilesetTileWidth = tileset.Width / tileWidth;
@@ -65,6 +65,7 @@ namespace Project1.src
                 if (o.Name == "")
                 {
                     collisionRects.Add(new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height));
+                    Console.WriteLine("X: " + o.X + " Y: " + o.Y + " W: " +o.Width + " H: " + o.Height);
                 }
             }
 
@@ -83,7 +84,7 @@ namespace Project1.src
             var initPos = player.position;
             player.Update();
 
-            #region Player CollinionRects
+            #region Player CollisionRects
             //Y axis
             foreach (var rect in collisionRects)
             {
@@ -94,9 +95,12 @@ namespace Project1.src
                     break;
                 }
             }
+
             //X axis
             foreach (var rect in collisionRects)
             {
+                Console.WriteLine("X: " + rect.X + " Y: " + rect.Y + " W: " +rect.Width + " H: " + rect.Height);
+                Console.WriteLine("X: " + player.hitbox.X + " Y: " + player.hitbox.Y + " W: " + player.hitbox.Width + " H: " + player.hitbox.Height);
                 if (rect.Intersects(player.hitbox))
                 {
                     player.position.X = initPos.X;

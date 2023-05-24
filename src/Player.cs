@@ -16,7 +16,7 @@ namespace Project1.src
         public Animation[] playerAnimation;
         public currentAnimation playerAnimationController;
 
-        public Player(Texture2D idleSprite, Texture2D runSprite) 
+        public Player(Texture2D idleSprite, Texture2D runSprite)
         {
             playerAnimation = new Animation[2];
 
@@ -25,7 +25,7 @@ namespace Project1.src
 
             playerAnimation[0] = new Animation(idleSprite);
             playerAnimation[1] = new Animation(runSprite);
-            hitbox = new Rectangle((int)position.X, (int)position.Y, 32, 32);
+            hitbox = new Rectangle((int)position.X, (int)position.Y, 48, 48);
         }
 
         public override void Update()
@@ -34,7 +34,7 @@ namespace Project1.src
             playerAnimationController = currentAnimation.Idle;
             if (isFalling)
                 velocity.Y += fallSpeed;
-            if (keyboard.IsKeyDown(Keys.A)) 
+            if (keyboard.IsKeyDown(Keys.A))
             {
                 velocity.X -= playerSpeed;
                 playerAnimationController = currentAnimation.Run;
@@ -46,10 +46,10 @@ namespace Project1.src
             }
 
             position = velocity;
-            hitbox.X = (int)position.X;
-            hitbox.Y = (int)position.Y;
+            hitbox.X = (int)position.X-24;
+            hitbox.Y = (int)position.Y-48;
             playerFallRect.X = (int)position.X;
-            playerFallRect.Y = (int)position.Y+32;
+            playerFallRect.Y = (int)position.Y+48;
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
