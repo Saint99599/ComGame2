@@ -32,9 +32,9 @@ namespace Project1.src
             IsMouseVisible = true;
 
 
-            _graphics.PreferredBackBufferWidth = 1920;
-            _graphics.PreferredBackBufferHeight = 1080;
-            _graphics.IsFullScreen = true;
+            _graphics.PreferredBackBufferWidth = 1000;
+            _graphics.PreferredBackBufferHeight = 1000;
+            //_graphics.IsFullScreen = true;
             _graphics.ApplyChanges();
         }
 
@@ -68,22 +68,6 @@ namespace Project1.src
                 }
             }
 
-            /*foreach (var objectGroup in map.ObjectGroups)
-            {
-                if (objectGroup.Name == "Collisions")
-                {
-                    foreach (var o in objectGroup.Objects)
-                    {
-                        if (o.Name == "")
-                        {
-                            collisionRects.Add(new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height));
-                        }
-                    }
-                    break;
-                }
-            }*/
-
-
             #region Player
             player = new Player(
                 Content.Load<Texture2D>("Movement\\Idle"),
@@ -98,17 +82,30 @@ namespace Project1.src
                 Exit();
             var initPos = player.position;
             player.Update();
+
+            #region Player CollinionRects
+            //Y axis
+            foreach (var rect in collisionRects)
+            {
+                player.isFalling = true;
+                if (rect.Intersects(player.playerFallRect))
+                {
+                    player.isFalling = false;
+                    break;
+                }
+            }
+            //X axis
             foreach (var rect in collisionRects)
             {
                 if (rect.Intersects(player.hitbox))
                 {
-                    player.position.Y = initPos.Y;
-                    player.velocity.Y = initPos.Y;
+                    player.position.X = initPos.X;
+                    player.velocity.X = initPos.X;
                     break;
                 }
             }
+            #endregion
 
-           
             base.Update(gameTime);
         }
 

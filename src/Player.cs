@@ -7,11 +7,11 @@ namespace Project1.src
     public class Player:Entity
     {
         public Vector2 velocity;
+        public Rectangle playerFallRect;
 
         public float playerSpeed = 4;
-        public float fallSpeed = 10;
+        public float fallSpeed = 5;
         public bool isFalling = true;
-        public bool isIntersecting = false;
 
         public Animation[] playerAnimation;
         public currentAnimation playerAnimationController;
@@ -32,6 +32,7 @@ namespace Project1.src
         {
             KeyboardState keyboard = Keyboard.GetState();
             playerAnimationController = currentAnimation.Idle;
+            if (isFalling)
                 velocity.Y += fallSpeed;
             if (keyboard.IsKeyDown(Keys.A)) 
             {
@@ -47,6 +48,8 @@ namespace Project1.src
             position = velocity;
             hitbox.X = (int)position.X;
             hitbox.Y = (int)position.Y;
+            playerFallRect.X = (int)position.X;
+            playerFallRect.Y = (int)position.Y+32;
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
